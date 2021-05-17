@@ -1,0 +1,9 @@
+.item {
+    color: darkmagenta;
+    margin: 15px 0px;
+}
+
+.item img {
+    height: 50px;
+    width: 50px;
+}
