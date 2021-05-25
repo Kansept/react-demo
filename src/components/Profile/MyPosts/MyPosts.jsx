@@ -12,7 +12,7 @@ const MyPosts = (props) => {
         </div>
       </div>
       <div className={s.posts}>
-        {props.posts.map((post) => <Post id={post.id} message={post.message} like={post.like} />) }
+        {props.posts.map((post) => <Post key={post.id} message={post.message} like={post.like} />) }
       </div>
     </div>
   );

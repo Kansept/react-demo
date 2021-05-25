@@ -10,7 +10,21 @@
 }
 
 .messages {
+  display: flex;
+  flex-direction: column;
 }
 .message {
+    margin: 5px 0;
     padding: 10px;
+    border-radius: 15px;
+}
+
+.to {
+  align-self: flex-start;
+  background-color: #eaeaea;
+}
+
+.from {
+  align-self: flex-end;
+  background-color: #c8b0ff;
 }

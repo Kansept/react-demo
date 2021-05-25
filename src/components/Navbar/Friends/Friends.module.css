@@ -1,0 +1,10 @@
+.title {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.friends {
+  display: flex;
+  flex-wrap: wrap;
+}
