@@ -1,14 +1,21 @@
 import s from './MyPosts.module.css';
 import Post from './../Post/Post';
+import React from 'react';
 
 const MyPosts = (props) => {
+
+  let newPostElement = React.createRef();
+  let addPosts = () => {
+    alert(newPostElement.current.value);
+  };
+
   return (
     <div>
       <h3>My posts</h3>
       <div>
-        <textarea></textarea>
+        <textarea ref={newPostElement}></textarea>
         <div>
-          <button>Add post</button>
+          <button onClick={addPosts}>Add post</button>
         </div>
       </div>
       <div className={s.posts}>
