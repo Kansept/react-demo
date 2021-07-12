@@ -5,8 +5,8 @@ const Friends = (props) => {
   let FriendsElements = props.friends.map((friend) => <FriendItem id={friend.id} name={friend.name} />);
   return (
     <div>
-      <div class={s.title}>Friends</div>
-      <div class={s.friends}>
+      <div className={s.title}>Friends</div>
+      <div className={s.friends}>
         {FriendsElements}
       </div>
     </div> 

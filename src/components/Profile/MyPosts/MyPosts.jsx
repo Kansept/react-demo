@@ -5,9 +5,7 @@ import React from 'react';
 const MyPosts = (props) => {
 
   let newPostElement = React.createRef();
-  let addPosts = () => {
-    alert(newPostElement.current.value);
-  };
+  let addPosts = () => {props.addPost(newPostElement.current.value)};
 
   return (
     <div>

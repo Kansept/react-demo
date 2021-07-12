@@ -2,7 +2,7 @@ import s from './FriendItem.module.css';
 
 const FriendItem = (props) => {
   return (
-    <div class={s.item}>{props.name}</div>
+    <div className={s.item}>{props.name}</div>
   );
 };
 
