@@ -8,6 +8,7 @@ let state = {
       { id: 3, like: 7, message: "Hello" },
       { id: 4, like: 6, message: "World" },
     ],
+    newPostText: 'new post text'
   },
   dialogsPage: {
     dialogs: [
@@ -21,7 +22,8 @@ let state = {
       { id: 2, message: "Yo", type: "from"},
       { id: 3, message: "Hello", type: "to"},
       { id: 4, message: "World", type: "from"},
-    ]
+    ],
+    newMessageText: 'new message text',
   },
   sidebar: {
     friends: [
@@ -32,14 +34,34 @@ let state = {
   }
 };
 
-export let addPost = (postMessage) => {
+export let addMessage = () => {
+  let newMessage = {
+      id: 5,
+      message: state.dialogsPage.newMessageText,
+      type: "from"
+    };
+  state.dialogsPage.messages.push(newMessage);
+  rerenderEntireTree(state);
+}
+
+export let updateNewMessageText = (newText) => {
+    state.dialogsPage.newMessageText = newText;
+    rerenderEntireTree(state);
+}
+
+export let addPost = () => {
   let newPost = {
     id: 5,
-    message: postMessage,
+    message: state.profilePage.newPostText,
     like: 0
   };
   state.profilePage.posts.push(newPost);
   rerenderEntireTree(state);
 };
+
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
 
 export default state;

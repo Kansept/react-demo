@@ -5,13 +5,17 @@ import React from 'react';
 const MyPosts = (props) => {
 
   let newPostElement = React.createRef();
-  let addPosts = () => {props.addPost(newPostElement.current.value)};
+  let addPosts = () => {
+    props.addPost();
+    props.updateNewPostText('');
+  };
+  let onPostChange = () => {props.updateNewPostText(newPostElement.current.value)};
 
   return (
     <div>
       <h3>My posts</h3>
       <div>
-        <textarea ref={newPostElement}></textarea>
+        <textarea ref={newPostElement} onChange={onPostChange} value={props.newPostText} />
         <div>
           <button onClick={addPosts}>Add post</button>
         </div>
