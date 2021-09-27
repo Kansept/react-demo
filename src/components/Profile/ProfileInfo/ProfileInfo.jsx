@@ -1,12 +1,16 @@
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
   return (
     <div>
       <div>
-        <img src="" alt="banner" />
+        <img src={props.profile.photos.large} alt="banner" />
       </div>
       <div>
-        ava + description
+        {props.profile.fullName}
       </div>
+      <div>
+        {props.profile.aboutMe}
+      </div>
+      <div>Статус: {props.profile.lookingForAJob ? 'Да' : 'Нет'} ({props.profile.lookingForAJobDescription})</div>
     </div>
   );
 }

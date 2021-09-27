@@ -6,3 +6,7 @@
 .selectPage {
   font-weight: bold;
 }
+
+.avatar {
+  height: 100px;
+}
