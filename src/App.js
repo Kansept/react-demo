@@ -1,6 +1,6 @@
 import './App.css';
 import {BrowserRouter, Route} from 'react-router-dom';
-import Header from './components/Header/Header';
+import HeaderContainer from './components/Header/HeaderContainer';
 import Navbar from './components/Navbar/Navbar';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
 import News from './components/News/News';
@@ -14,7 +14,7 @@ const App = (props) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
-        <Header/>
+        <HeaderContainer/>
         <Navbar state={store.getState().sidebar} />
         <div className="app-wrapper-content">
           <Route path='/dialogs' render={() => <DialogsContainer />} />
