@@ -9,6 +9,7 @@ import Settings from './components/Settings/Settings';
 import store from './redux/redux-store';
 import UsersContainer from './components/Users/UsersContainer';
 import ProfileContainer from './components/Profile/ProfileContainer';
+import Login from './components/Login/Login';
 
 const App = (props) => {
   return (
@@ -23,6 +24,7 @@ const App = (props) => {
           <Route path='/music' component={Music} />
           <Route path='/settings' component={Settings} />
           <Route path='/users' render={() => <UsersContainer />} />
+          <Route path='/login' render={() => <Login />} />
         </div>
       </div>
     </BrowserRouter>
