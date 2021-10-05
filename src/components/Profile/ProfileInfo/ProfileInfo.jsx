@@ -1,9 +1,12 @@
+import ProfileStatus from "./ProfileStatus";
+
 const ProfileInfo = (props) => {
   return (
     <div>
       <div>
         <img src={props.profile.photos.large} alt="banner" />
       </div>
+      <ProfileStatus status="Hi" />
       <div>
         {props.profile.fullName}
       </div>
