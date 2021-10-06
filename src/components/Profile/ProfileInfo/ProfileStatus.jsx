@@ -4,6 +4,7 @@ import React from "react";
  {
   state = {
     editMode: false,
+    status: this.props.status,
   };
 
   activateEditMode = () => {
@@ -16,6 +17,11 @@ import React from "react";
     this.setState({
       editMode: false,
     });
+    this.props.updateStatus(this.state.status);
+  }
+
+  onStatusChange = (e) => {
+    this.setState({ status: e.currentTarget.value });
   }
 
   render() {
@@ -28,7 +34,8 @@ import React from "react";
         }
         {this.state.editMode &&
         <div>
-          <input onBlur={ this.deactivateEditMode } value={this.props.status} autoFocus={true} />
+          <input onBlur={ this.deactivateEditMode } value={this.state.status} autoFocus={true} 
+            onChange={this.onStatusChange} />
         </div>
         }
       </>

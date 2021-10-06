@@ -4,13 +4,12 @@ import s from './Profile.module.css';
 import Preloader from "./../Preloader/Preloader";
 
 const Profile = (props) => {
-  console.log(props);
   if (!props.profile) {
     return <Preloader />
   }
   return (
     <div className={s.content}>
-      <ProfileInfo profile={props.profile} />
+      <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} />
       <MyPostsContainer />
     </div>
   );
